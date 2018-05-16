@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<!-- 
+
+Notes:
+- make website one page with all info
+- IGNORE ALL JQUERY ERRORS
+- https://github.com/guidobouman/panelsnap
+- Push this to aravs github
+- Add navbar
+
+-->
+
+
+
+<html>
+    <head>
+        <title>Project Name</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/bootstrap.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Gothic+A1:300" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="jquery-panelSnap.js"></script>
+        <script>
+            jQuery(function($) {
+            $('body').panelSnap();});
+        </script>
+        
+        <!-- Settings for scroll snapping -->
+        <script>
+        jQuery(function($) {
+        var options = {
+            $menu: false,
+            menuSelector: 'a',
+            panelSelector: '> section',
+            namespace: '.panelSnap',
+            onSnapStart: function(){},
+            onSnapFinish: function(){},
+            onActivate: function(){},
+            directionThreshold: 55,
+            slideSpeed: 100,
+            easing: 'linear',
+            offset: 0,
+            navigation: {
+                keys: {
+                    nextKey: true,
+                    prevKey: true,
+                },
+                buttons: {
+                    $nextButton: true,
+                    $prevButton: true,
+                },
+            wrapAround: false
+            }
+        };
+
+        $('.panel_container').panelSnap(options);});
+        </script>
+    </head>
+    
+    <body>
+        <a name="home">
+            <section class="page one active">
+                <div class="navbar">
+                    <ul class="horizontal_list">
+                        <li><a href="#backstory">Our Backstory</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#howItWorks">How it works</a></li>  
+                    </ul>
+                </div>
+                <p class="textCenter fontSize whiteText">Snap-Draw Holsters</p>
+                <div class="bottom textCenter">
+                    <p class="greyText">Scroll down for more info</p>
+                </div>
+            </section>
+        </a>
+        <a name="backstory">
+            <section class="page two">
+                <p id="p2text"><strong>Our product was inspired by the recent wave of backlash on our police
+                departments in America, as well as a <a href="https://www.nytimes.com/2018/05/07/us/police-mentos-gun-video.html" target=_blank>recent news story</a>
+                about a deputy pulling a gun while off duty. We wanted to help reduce 
+                tensions and make it easier to provide evidence in court. In the case where body 
+                cameras or security cameras are not functioning properly or present, 
+                we need a tamper-proof way to tell what exactly happened in the heat 
+                of the situation. That's why we came up with the Snap-Draw holsters: 
+                a cheap and easy method to keeping track of a firefight. This easy 
+                and ready to produce device can send Bluetooth signals about when the 
+                gun has been removed and put back in it's holsters. Once fully developed, 
+                it could be used for shots fired, and safety turned off. Keep in mind that 
+                although the device is designed for police security, we support our deputies 
+                and wish them luck in their careers. This is for everyone's safety, including 
+                theirs. Feel free to read through the rest of the website.</strong></p>
+            </section>
+            <a name="howItWorks">
+            <section class="page three">
+                <p id="p3text"><strong>The way our product works is whenever you pull out your gun, 
+                turn of the safety, or fire a bullet, it will track the amount of times you have done so.</strong></p>
+            </section>
+        </a>
+        <a name="contactUs">
+            <section class="page">
+                <p class="textCenter">Contact Us<br>
+                Arav Vyawahare: <a href="mailto:arav17@gmail.com">arav17@gmail.com</a><br>
+                Kunsh Zutshi: <a href="mailto:kunshzutshi007@gmail.com">kunshzutshi007@gmail.com</a><br>
+                Danny Nguyen: <a href="mailto:dannynguyen84268@gmail.com">dannynguyen84268@gmail.com</a><br>
+                Nathan Budiman: <a href="mailto:something@something.com">something@something.com</a>
+                </p>
+            </section>
+        </a>
+    </body>
+</html>
