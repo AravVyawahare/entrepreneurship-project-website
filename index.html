@@ -6,8 +6,6 @@ Notes:
 - make website one page with all info
 - IGNORE ALL JQUERY ERRORS
 - https://github.com/guidobouman/panelsnap
-- Push this to aravs github
-- Add navbar
 
 -->
 
@@ -38,8 +36,8 @@ Notes:
             onSnapStart: function(){},
             onSnapFinish: function(){},
             onActivate: function(){},
-            directionThreshold: 55,
-            slideSpeed: 100,
+            directionThreshold: 50,
+            slideSpeed: 110,
             easing: 'linear',
             offset: 0,
             navigation: {
@@ -62,11 +60,12 @@ Notes:
     <body>
         <a name="home">
             <section class="page one active">
-                <div class="navbar">
+                <div class="navbar nav-center">
                     <ul class="horizontal_list">
                         <li><a href="#backstory">Our Backstory</a></li>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#howItWorks">How it works</a></li>  
+                        <li><a href="#contactUs">Contact Us</a></li>
                     </ul>
                 </div>
                 <p class="textCenter fontSize whiteText">Snap-Draw Holsters</p>
@@ -88,14 +87,16 @@ Notes:
                 and ready to produce device can send Bluetooth signals about when the 
                 gun has been removed and put back in it's holsters. Once fully developed, 
                 it could be used for shots fired, and safety turned off. Keep in mind that 
-                although the device is designed for police security, we support our deputies 
+                the device is designed for police security, we support our deputies 
                 and wish them luck in their careers. This is for everyone's safety, including 
                 theirs. Feel free to read through the rest of the website.</strong></p>
             </section>
-            <a name="howItWorks">
+        </a>
+        <a name="howItWorks">
             <section class="page three">
-                <p id="p3text"><strong>The way our product works is whenever you pull out your gun, 
-                turn of the safety, or fire a bullet, it will track the amount of times you have done so.</strong></p>
+                <p id="p3text" class="textCenter"><strong>The way our product works is whenever you pull out your gun,
+                turn of the safety, or fire a bullet, it will track the amount of times you have done so.</a>
+                </strong></p>
             </section>
         </a>
         <a name="contactUs">
@@ -108,5 +109,6 @@ Notes:
                 </p>
             </section>
         </a>
+        
     </body>
 </html>
